@@ -1,0 +1,13 @@
+.bg-jumbotron {
+  background-color: white !important;
+  margin-top: -30px !important;
+}
+
+.text-jumbotron {
+  color: rgb(236, 68, 6);
+  margin-top: 20px;
+}
+
+.card-spacing {
+  margin-top: -70px !important;
+}

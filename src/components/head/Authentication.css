@@ -1,0 +1,10 @@
+.form-style {
+  border-style: solid;
+  border-color: rgb(190, 83, 44);
+  background-color: rgb(245, 236, 234);
+}
+
+.btn-style {
+  background-color: rgb(214, 58, 1) !important;
+  font-weight: bolder !important;
+}
