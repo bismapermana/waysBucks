@@ -1,22 +1,17 @@
-import React, { useState } from "react";
-import { Navbar, Nav, Image, Button } from "react-bootstrap";
+import React, { useContext } from "react";
 import logo from "../../assets/logo.png";
-import Authentication from "./Authentication";
+import Register from "../authentication/Register";
+import Login from "../authentication/Login";
+import { Button, Nav, Navbar, Image } from "react-bootstrap";
+import { AuthContext } from "../../contexts/AuthContext";
 
 function NavigationBar() {
-  const [showSignup, setShowSignup] = useState(false);
-  const [showSignin, setShowSignin] = useState(false);
-
-  const handleCloseSignup = () => setShowSignup(false);
-  const handleShowSignup = () => setShowSignup(true);
-
-  const handleCloseSignin = () => setShowSignin(false);
-  const handleShowSignin = () => setShowSignin(true);
+  const { handleShowLogin, handleShowRegister } = useContext(AuthContext);
 
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" bg="white" className="mx-5 mt-3">
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <Image src={logo} fluid />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -29,16 +24,16 @@ function NavigationBar() {
               <Button
                 variant="danger"
                 className="px-4 py-1"
-                onClick={handleShowSignup}
+                onClick={handleShowLogin}
               >
-                Sign Up
+                Log In
               </Button>
             </Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
+            <Nav.Link eventKey={2}>
               <Button
                 variant="outline-danger"
                 className="px-4 py-1"
-                onClick={handleShowSignin}
+                onClick={handleShowRegister}
               >
                 Sign In
               </Button>
@@ -46,12 +41,8 @@ function NavigationBar() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <Authentication
-        signupModalShow={showSignup}
-        onHideSignup={handleCloseSignup}
-        signinModalShow={showSignin}
-        onHideSignin={handleCloseSignin}
-      />
+      <Register />
+      <Login />
     </div>
   );
 }

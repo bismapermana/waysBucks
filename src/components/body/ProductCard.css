@@ -6,3 +6,9 @@
   color: rgb(148, 3, 3);
   font-weight: bolder;
 }
+
+.card-btn {
+  background-color: rgb(243, 176, 187);
+  border: none;
+  margin-left: -6px;
+}

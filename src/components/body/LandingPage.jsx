@@ -1,15 +1,13 @@
 import React from "react";
-import NavigationBar from "../head/NavigationBar";
 import { Jumbotron, Container, Image } from "react-bootstrap";
 import banner from "../../assets/Banner.png";
+
 import "./LandingPage.css";
 import ProductCard from "./ProductCard";
 
 function LandingPage() {
   return (
     <div>
-      <NavigationBar />
-
       <Jumbotron fluid className="mx-5 bg-jumbotron ">
         <Container>
           <Image src={banner} fluid />
@@ -17,6 +15,7 @@ function LandingPage() {
         </Container>
       </Jumbotron>
       <Container className="card-spacing">
+        <h1></h1>
         <ProductCard />
       </Container>
     </div>
