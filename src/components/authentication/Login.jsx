@@ -5,13 +5,13 @@ import { AuthContext } from "../../contexts/AuthContext";
 import "./Authentication.css";
 
 function Authentication() {
-  const { showLogin, handleCloseLogin } = useContext(AuthContext);
+  const { showLogin, handleCloseLogin, handleLogin } = useContext(AuthContext);
 
   return (
     <div>
       <Modal show={showLogin} onHide={handleCloseLogin}>
         <Modal.Header closeButton>
-          <Modal.Title>Sign Up</Modal.Title>
+          <Modal.Title>Sign In</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
@@ -28,12 +28,13 @@ function Authentication() {
                 className="form-style w-100 py-2 rounded"
                 type="password"
                 placeholder="Enter Password"
+                rafc
               />
             </Form.Group>
 
             <Button
               variant="primary"
-              onClick={handleCloseLogin}
+              onClick={handleLogin}
               className="w-100 mt-4 py-2 btn-style"
             >
               Sign Up
