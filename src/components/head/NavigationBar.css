@@ -1,0 +1,12 @@
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.dropdown-toggle {
+  background-color: white !important;
+  border: none !important;
+}
+
+.dropdown-menu {
+  width: -10px !important;
+}

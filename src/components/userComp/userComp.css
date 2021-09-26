@@ -1,0 +1,23 @@
+.profile-font-style {
+  color: rgb(175, 6, 6);
+}
+
+.detail-transaction-style {
+  background-color: rgb(255, 192, 192);
+  border-radius: 3% !important;
+}
+
+.image-transaction-style {
+  border-radius: 5% !important;
+  margin-bottom: 10px;
+  margin-right: 5px !important;
+}
+
+.text-transaction-style {
+  font-weight: normal;
+  font-size: x-small;
+}
+
+.subtotal-font-style {
+  font-size: xx-small;
+}

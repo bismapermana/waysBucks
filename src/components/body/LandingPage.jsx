@@ -1,9 +1,8 @@
 import React from "react";
 import { Jumbotron, Container, Image } from "react-bootstrap";
 import banner from "../../assets/Banner.png";
-
 import "./LandingPage.css";
-import ProductCard from "./ProductCard";
+import ProductCard from "./product/ProductCard";
 
 function LandingPage() {
   return (
@@ -15,7 +14,6 @@ function LandingPage() {
         </Container>
       </Jumbotron>
       <Container className="card-spacing">
-        <h1></h1>
         <ProductCard />
       </Container>
     </div>
