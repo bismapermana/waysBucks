@@ -3,7 +3,8 @@
 }
 
 .dropdown-toggle {
-  background-color: white;
+  background-color: white !important;
+  border: none !important;
 }
 
 .dropdown-menu {

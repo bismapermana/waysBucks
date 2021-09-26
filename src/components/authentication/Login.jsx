@@ -37,7 +37,7 @@ function Authentication() {
               onClick={handleLogin}
               className="w-100 mt-4 py-2 btn-style"
             >
-              Sign Up
+              Sign In
             </Button>
             <p className="text-center pt-3">
               Don't Have an Account? Click <b>here</b>

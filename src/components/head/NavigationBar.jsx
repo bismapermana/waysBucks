@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import Register from "../authentication/Register";
 import Login from "../authentication/Login";
@@ -14,9 +15,11 @@ function NavigationBar() {
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" bg="white" className="mx-5 mt-3">
-        <Navbar.Brand href="/">
-          <Image src={logo} fluid />
-        </Navbar.Brand>
+        <Link to="/">
+          <Navbar.Brand href="/">
+            <Image src={logo} fluid />
+          </Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse
           id="responsive-navbar-nav"
@@ -25,7 +28,7 @@ function NavigationBar() {
           {isLogin ? (
             <Nav>
               <Nav.Item>
-                <Image src={cartLogo} height="30" className="mr-4" />
+                <Image src={cartLogo} height="40" className="mr-4 mt-4" />
               </Nav.Item>
               <Nav.Item>
                 <Dropdown>
@@ -33,12 +36,14 @@ function NavigationBar() {
                     <Image
                       src="http://www.thaicybergames.com/dota/images/heroes/101.jpg"
                       roundedCircle
-                      height="30"
+                      height="70"
                     />
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu className="dropdown-menu">
-                    <Dropdown.Item>Profile</Dropdown.Item>
+                    <Dropdown.Item classname="text-decoration-none">
+                      <Link to="/user">Profile </Link>
+                    </Dropdown.Item>
                     <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
@@ -52,7 +57,7 @@ function NavigationBar() {
                   className="px-4 py-1"
                   onClick={handleShowLogin}
                 >
-                  Log In
+                  Sign In
                 </Button>
               </Nav.Link>
               <Nav.Link eventKey={2}>
@@ -61,7 +66,7 @@ function NavigationBar() {
                   className="px-4 py-1"
                   onClick={handleShowRegister}
                 >
-                  Sign In
+                  Sign Up
                 </Button>
               </Nav.Link>
             </Nav>
